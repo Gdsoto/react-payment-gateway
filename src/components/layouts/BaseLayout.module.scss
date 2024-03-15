@@ -1,0 +1,14 @@
+@import '@/utils/styles/styles.module.scss';
+
+.baseContainer {
+	max-width: 320px;
+	margin: 0 auto;
+
+	@media screen and (min-width: $size-mobile) {
+		max-width: $size-mobile;
+	}
+
+	@media screen and (min-width: $size-desktop) {
+		max-width: $size-desktop;
+	}
+}

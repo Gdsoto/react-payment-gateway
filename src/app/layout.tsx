@@ -1,13 +1,12 @@
 // Libs
 import type { Metadata } from 'next';
 
-// Assets
-import { Inter } from 'next/font/google';
-
 // Styles
 import './globals.scss';
+import { inter } from '@/utils/declareFonts';
 
-const inter = Inter({ subsets: ['latin'] });
+// Components
+import BaseLayout from '@/components/layouts/BaseLayout';
 
 export const metadata: Metadata = {
 	title: 'Payment App',
@@ -21,7 +20,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="es">
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<BaseLayout>{children}</BaseLayout>
+			</body>
 		</html>
 	);
 }
