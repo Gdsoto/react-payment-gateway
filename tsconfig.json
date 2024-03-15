@@ -37,14 +37,16 @@
       ],
       "@/redux/*": [
         "./src/redux/*"
-      ],
-    }
+      ]
+    },
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
+    "./app/storeProvider.tsx",
     "jest.config.js"
   ],
   "exclude": [
