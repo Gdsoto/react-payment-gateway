@@ -11,7 +11,7 @@ const NavBar = () => {
 	return (
 		<nav className={styles.navbar}>
 			<AcUnitIcon fontSize="large" />
-			<ShoppingCartIcon fontSize="large" />
+			<ShoppingCartIcon />
 		</nav>
 	);
 };
