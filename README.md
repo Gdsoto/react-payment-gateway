@@ -2,7 +2,8 @@
 
 React Payment Gateway is a payment gateway built with React, TypeScript, Sass, and CSS Modules in Next.js. This project provides an organized component structure and full test coverage to ensure its quality and maintainability. 
 
-## Directory Structure The project follows the following directory structure:
+## Directory Structure 
+The project follows the following directory structure:
 
 - **components/**: Contains all the components of the application. Each component has its own folder that includes its main implementation, utilities, tests, and styles.
 - **app/**: Contains the Next.js pages.
@@ -23,7 +24,7 @@ The project includes full test coverage to ensure code stability and quality. Te
 Follow these steps to run the project on your local environment: 1. Clone the GitHub repository:
 
 1.  clone the repository
-    `git clone https://github.com/your-username/react-payment-gateway.git`
+    `git clone https://github.com/Gdsoto/react-payment-gateway.git`
 2.  Navigate to the project directory:
     `cd react-payment-gateway`
 3.  Install the dependencies using Yarn:
