@@ -57,8 +57,9 @@
 }
 
 .buttonOutline {
-  border: 1px solid $color-white;
-  color: transparent;
+  border: none;
+  background-color: $color-primary;
+  color: $color-white;
 }
 
 .buttonStroke {
