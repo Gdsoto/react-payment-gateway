@@ -8,12 +8,12 @@ import AcUnitIcon from '@mui/icons-material/AcUnit';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const NavBar = () => {
-	return (
-		<nav className={styles.navbar}>
-			<AcUnitIcon fontSize="large" />
-			<ShoppingCartIcon />
-		</nav>
-	);
+  return (
+    <nav className={styles.navbar} data-test-id='navbar'>
+      <AcUnitIcon fontSize='large' />
+      <ShoppingCartIcon />
+    </nav>
+  );
 };
 
 export default NavBar;

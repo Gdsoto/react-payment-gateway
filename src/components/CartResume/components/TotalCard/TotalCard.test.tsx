@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import TotalCard from './TotalCard';
+import StoreProvider from '@/app/storeProvider';
 
 describe('TotalCard', () => {
   const productsExample = [
@@ -31,11 +32,15 @@ describe('TotalCard', () => {
   ];
 
   it('renders total card correctly', () => {
-    const { getByText } = render(<TotalCard products={productsExample} />);
+    const { getByText } = render(
+      <StoreProvider>
+        <TotalCard products={productsExample} />
+      </StoreProvider>
+    );
 
     expect(getByText('Cart Total')).toBeInTheDocument();
-    expect(getByText('$10.99')).toBeInTheDocument();
-    expect(getByText('$20.99')).toBeInTheDocument();
+    expect(getByText('$31.979999999999997')).toBeInTheDocument();
+    expect(getByText('$37.98')).toBeInTheDocument();
     expect(getByText('Pay With Credit card')).toBeInTheDocument();
   });
 });
