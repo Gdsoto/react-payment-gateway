@@ -12,6 +12,7 @@ const CreditCardFormat = React.forwardRef<NumericFormatProps, CustomProps>(
 
     return (
       <PatternFormat
+        data-test-id='creditCardInput'
         {...other}
         getInputRef={ref}
         onValueChange={(values) => {
