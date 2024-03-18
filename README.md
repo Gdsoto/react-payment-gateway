@@ -13,7 +13,7 @@ The project follows the following directory structure:
 
 ## Testing
 
-The project includes full test coverage to ensure code stability and quality. Tests can be found in the `tests/` folder. The test coverage is displayed in the following image:  
+The project includes full test coverage to ensure code stability and quality. The test coverage is displayed in the following image:  
 `yarn test`
 
 ![coverage](https://github.com/Gdsoto/react-payment-gateway/assets/51761203/c3c35d0c-8313-4b6f-aa8c-294073544ec5)
