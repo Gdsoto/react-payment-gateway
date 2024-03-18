@@ -1,0 +1,41 @@
+@import '@/utils/styles/styles.module.scss';
+
+.resultTitle {
+  margin: 2rem 0;
+  color: $color-primary;
+  font-size: 1.45rem;
+  font-weight: 300;
+}
+
+.resultContainer {
+  padding: 0.5rem;
+  display: grid;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.resultPicture {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.resultItem {
+  color: $color-primary;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.resultItemValue {
+  color: $color-secondary;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+@media screen and (min-width: $size-desktop) {
+  .resultContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
