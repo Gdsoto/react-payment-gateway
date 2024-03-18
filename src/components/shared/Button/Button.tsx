@@ -11,6 +11,7 @@ interface IButton {
   fluid?: boolean;
   onClick?: () => void;
   loading?: boolean;
+  disabled?: boolean;
 }
 
 const Button: FC<IButton> = ({
@@ -21,6 +22,7 @@ const Button: FC<IButton> = ({
   btnType = 'stroke',
   onClick,
   loading = false,
+  disabled = false,
 }: IButton) => {
   const getButtonSize = () => {
     switch (size) {
@@ -49,7 +51,7 @@ const Button: FC<IButton> = ({
       type={type}
       className={classes}
       onClick={onClick}
-      disabled={loading}
+      disabled={loading || disabled}
     >
       {loading ? <div className={style.btnLoader}></div> : text}
     </button>

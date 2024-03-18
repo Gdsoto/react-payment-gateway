@@ -1,5 +1,4 @@
-import React from 'react';
-import { ProductI } from '../../models';
+import React, { FC, useEffect } from 'react';
 
 // Utils
 import { getPriceValues } from './TotalCard.util';
@@ -8,8 +7,22 @@ import { getPriceValues } from './TotalCard.util';
 import styles from './TotalCard.module.scss';
 import Button from '@/components/shared/Button/Button';
 
-const TotalCard = ({ products }: { products: ProductI[] }) => {
+// Models
+import { TotalCardI } from './models';
+import { useDispatch } from 'react-redux';
+import { setProductData } from '@/context/store/slices/paymentData.slice';
+
+const TotalCard: FC<TotalCardI> = ({ products, onPayAction }: TotalCardI) => {
+  const dispatch = useDispatch();
   const priceValues = getPriceValues(products);
+
+  useEffect(() => {
+    dispatch(
+      setProductData({
+        finalPrice: priceValues[3].price,
+      })
+    );
+  }, [priceValues]);
 
   return (
     <div className={styles.totalCardContainer}>
@@ -20,7 +33,13 @@ const TotalCard = ({ products }: { products: ProductI[] }) => {
           <p className={styles.totalPrices}>${price.price}</p>
         </div>
       ))}
-      <Button text='Pay With Credit card' btnType='stroke' size='large' fluid />
+      <Button
+        onClick={onPayAction}
+        text='Pay With Credit card'
+        btnType='stroke'
+        size='large'
+        fluid
+      />
     </div>
   );
 };

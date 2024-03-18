@@ -1,10 +1,12 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 
 // Components
-import ErrorComponent from '../shared/ErrorComponent/ErrorComponent';
 import Loader from '../shared/Loader/Loader';
+import ModalUi from '../shared/Modal/Modal';
+import TotalCard from './components/TotalCard/TotalCard';
 import ProductCard from './components/ProductCard/ProductCard';
+import ErrorComponent from '../shared/ErrorComponent/ErrorComponent';
 
 // Styles
 import styles from './CartResume.module.scss';
@@ -14,11 +16,23 @@ import { useGetProductsQuery } from '@/context/apis/productsApi';
 
 // Models
 import { ProductI } from './models';
-import TotalCard from './components/TotalCard/TotalCard';
+import PaymentSteps from './components/PaymentSteps/PaymentSteps';
+import { getInfoFormLocalStorage } from '@/utils/functions/getFromLocalStorage';
 
 const CartResume = () => {
+  const parsedData = getInfoFormLocalStorage();
+
   const { data, isLoading, isError } = useGetProductsQuery(3);
+  const [modalState, setModalState] = useState(false);
   const totalProducts = data?.length;
+
+  const handleCloseModal = () => {
+    setModalState(false);
+  };
+
+  const handlePayAction = () => {
+    setModalState(true);
+  };
 
   if (isError) return <ErrorComponent />;
 
@@ -42,8 +56,14 @@ const CartResume = () => {
             </ul>
           </section>
           <section>
-            <TotalCard products={data} />
+            <TotalCard products={data} onPayAction={handlePayAction} />
           </section>
+          <ModalUi isOpen={modalState}>
+            <PaymentSteps
+              handleCloseModal={handleCloseModal}
+              defaultValues={parsedData}
+            />
+          </ModalUi>
         </article>
       )}
     </>
