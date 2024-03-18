@@ -2,7 +2,7 @@
  * Custom hooks for Redux integration in React components.
  */
 
-import { AppDispatch, AppStore, RootState } from '@/redux/store/store';
+import { AppDispatch, AppStore, RootState } from '@/context/store/store';
 import { useDispatch, useSelector, useStore } from 'react-redux';
 import type { TypedUseSelectorHook } from 'react-redux';
 

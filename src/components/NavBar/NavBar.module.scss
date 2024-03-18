@@ -1,0 +1,14 @@
+@import '@/utils/styles/styles.module.scss';
+
+.navbar {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 4rem;
+  }
+}

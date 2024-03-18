@@ -1,0 +1,31 @@
+@import '@/utils/styles/styles.module.scss';
+
+.BasicDataContainer {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.CardDataContainer {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cardCvv {
+  display: grid;
+  gap: 1rem;
+}
+
+@media screen and (min-width: $size-desktop) {
+  .BasicDataContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cardCvv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}

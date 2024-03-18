@@ -1,0 +1,24 @@
+@import '@/utils/styles/styles.module.scss';
+
+.paymentStepsContainer {
+  display: grid;
+}
+
+.stepTitle {
+  color: $color-primary;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+@media screen and (min-width: $size-desktop) {
+  .buttonContainer {
+    flex-direction: row;
+  }
+}

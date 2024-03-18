@@ -1,0 +1,29 @@
+@import '@/utils/styles/styles.module.scss';
+
+.totalCardContainer {
+  background-color: $color-primary;
+  border-radius: 0.7rem;
+  padding: 1.3rem 1rem;
+}
+
+.totalTitle {
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  font-weight: 300;
+  color: $color-white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.totalInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: $color-white;
+  font-weight: 300;
+}
+
+.totalPrices {
+  font-weight: 200;
+  font-size: 1.2rem;
+}
