@@ -1,9 +1,14 @@
 # React Payment Gateway
 
-React Payment Gateway is a payment gateway built with React, TypeScript, Sass, and CSS Modules in Next.js. This project provides an organized component structure and full test coverage to ensure its quality and maintainability. ## Directory Structure The project follows the following directory structure:
+React Payment Gateway is a payment gateway built with React, TypeScript, Sass, and CSS Modules in Next.js. This project provides an organized component structure and full test coverage to ensure its quality and maintainability. 
+
+## Directory Structure The project follows the following directory structure:
 
 - **components/**: Contains all the components of the application. Each component has its own folder that includes its main implementation, utilities, tests, and styles.
 - **app/**: Contains the Next.js pages.
+
+## Demo
+[Payment App](https://master.d1qvnxxyso82fm.amplifyapp.com/)
 
 ## Testing
 
